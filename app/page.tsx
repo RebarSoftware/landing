@@ -15,7 +15,11 @@ export default function Home() {
           height={120}
         />
         <div className="flex flex-col items-center justify-center">
-          <h1 className={`text-6xl font-bold tracking-widest ${orbitron.className}`}>REBAR</h1>
+          <h1
+            className={`text-6xl font-bold tracking-widest ${orbitron.className}`}
+          >
+            REBAR
+          </h1>
           <h2 className="text-neutral-500 text-lg"> Bitcoin RPC</h2>
         </div>
         <div>
