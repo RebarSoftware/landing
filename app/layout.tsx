@@ -1,9 +1,9 @@
-import { Orbitron } from 'next/font/google';
+import { Orbitron, Courier_Prime } from 'next/font/google';
 import { Providers } from './providers';
 import '../styles/globals.css';
 import { sharedMetadata } from 'utils/metadata';
 
-const revalia = Orbitron({ subsets: ['latin'], weight: '400' });
+const courier = Courier_Prime({ subsets: ['latin'], weight: '400' });
 
 export const metadata = sharedMetadata;
 
@@ -15,10 +15,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${revalia.className} h-screen w-screen bg-black text-white`}
+        className={`${courier.className} h-screen w-screen text-white bg-gradient-to-br from-neutral-950 via-stone-900 to-zinc-950`}
         suppressHydrationWarning={true}
       >
-        <Providers>{children}</Providers>
+        <Providers>
+          {children}
+        </Providers>
       </body>
     </html>
   );
